@@ -1,0 +1,180 @@
+@import url("viewPort.css");
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+/* header bar css */
+header{
+    text-align: center;
+    font-size: 1.75rem;
+    padding: 0;
+    margin-bottom: 5px;
+}
+header h1{
+    margin:  0;
+}
+header p{
+    margin: 5px 0 0 0;    
+    font-size: 1.25rem;
+    color: rgb(110, 110, 110);
+}
+
+/* Main css tags */
+section{
+    margin-left: 5px;
+    padding: 25px 50px 0 0;
+    text-align: left;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    padding: 25px 30px 25px 50px;    
+    column-gap: 25px;
+    row-gap: 20px;
+    margin-bottom: 40px;
+}
+legend{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+fieldset{
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.732);
+    background-color: rgb(245, 245, 245) ;
+}
+fieldset h3{
+    margin-left: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+fieldset p{
+    margin-left: 30px;
+    font-size: 1.25rem;
+    margin-top: -15px;
+}
+span{
+    margin-left: 30px;
+    font-weight: 400;
+}
+
+/* Main body-Class id css */
+.categoryBar{
+    position: sticky;
+    top: -1px;
+    background-color: rgb(223, 4, 4);
+}
+.category{
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content:center;
+    flex-wrap: nowrap;
+}
+.category a{    
+    flex: 1;
+    padding: 10px 10px;
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(223, 4, 4);
+}
+.category a:hover{
+    background-color: rgba(110, 4, 4, 0.349);
+    cursor: pointer;
+}
+
+
+/* news and weather */
+.content{
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+    column-gap: 10px;
+    row-gap: 20px;
+    margin-top: 5px;
+}
+.news-card{ 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 15px 10px;
+    background-color: rgba(245, 245, 245, 0.626);
+    height: 250px;
+    border: 0.25px solid rgb(202, 202, 202);
+}
+.news-card:hover{
+    box-shadow: 0 0 10px  rgb(97, 97, 97);
+    background-color: rgb(250, 250, 250) ;
+}
+.newsImg{
+    flex: 1;
+    border-radius: 4px;
+    width: 100%;
+    height: 60%;
+    margin-bottom: 0;
+}
+.newsInfo{
+    flex: 1;
+    margin: 10px 5px 0;
+}
+
+.anchor{
+    margin-left: 0;
+    text-decoration: underline;
+}
+.anchor:hover{
+    color: rgb(184, 43, 184);
+}
+.weather{
+    padding:5px 25px ;
+}
+.weather h2,.weather div{
+    display: inline-block;
+    margin: 0 10px;
+}
+input{
+    margin-top: 10px;
+    width: 55%;
+    height: 21.1px;
+    font-size: 1.25rem;
+    padding: 5px 15px;
+    border:none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.732);
+    background-color: rgb(245, 245, 245);
+}
+input:hover{
+    background-color: rgba(223, 221, 221, 0.601);  
+}
+input::placeholder{
+    font-size: 1.25rem;
+}
+input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.732);
+}
+#weatherButton{
+    margin-top: 10px;
+    margin-left: -5px;
+    padding: 6px 0;
+    font-size: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    width: 20%;
+    background-color: rgb(245, 245, 245) ;
+    outline: none;
+}
+#weatherButton:hover{
+    background-color: rgba(223, 221, 221, 0.601);  
+}
+footer{
+    font-size: 1.1rem;
+    position: absolute;
+    width: 100%;
+    padding: 25px 0;
+    background-color: rgba(239, 239, 239);
+    margin-top: auto;
+}

@@ -1,0 +1,36 @@
+<%- include("./partials/header") -%>
+<!-- News section -->
+<div class="content">    
+        <main >
+            <% if(news!=null){ %>
+            <% news.forEach(function(singleNews){ %>
+                <div class="news-card">
+                    <img class="newsImg" src="<%-singleNews.image%>" alt="Image not available" >
+                    <h3 class="newsInfo"><%= (singleNews.title).substring(0,75)%> <a class="anchor" href="<%= singleNews.url %>" target="_blank">...continue reading</a></h3>
+                </div>
+            <% });} else{ %>
+                <h2>No news found!</h2>
+                <%}%>
+    </main>
+    <!-- Weather section -->
+    <section class="sidebar-weather">
+            <fieldset>
+                <legend>Weather</legend>
+                <form action="/" class="Weather" method="post" >
+                    <div class="weatherSearch">
+                        <input type="text" name="citySearch" id="locationInput" placeholder="Enter City">
+                    <button type="submit" id="weatherButton">Search</button>
+                    </div>
+                </form> 
+                <% if(weatherDetails!=null){ %>
+                <h3>
+                    <%= cityName %>
+                    <span><%= weatherDetails.main.temp %> C</span>
+                </h3>    
+                    <img src="http://openweathermap.org/img/wn/<%- weatherDetails.weather[0].icon%>@2x.png" alt="No image found" >
+                    <p><%= weatherDetails.weather[0].description %></p>
+                <% } %>
+            </fieldset>               
+    </section>
+</div>
+<%- include("partials/footer") -%>
